@@ -17,14 +17,25 @@ export class ProductsComponent {
     this.producsFriends = this._PostsService.friends;
     
   }
-  
+
+
   private readonly _PostsService = inject(PostsService)
 
-  products: Iproduct[] = this._PostsService.productsData;
+  products: Iproduct[] =[]
 
    
   
   ngOnInit() {
+    this._PostsService.getProducts().subscribe({
+      next: (res) => {
+        this.products = res;
+        return res
+      },
+      error: (err) => {
+       
+      }
+      
+    });
     this._PostsService.productsSource.subscribe((products) => {
       this.products = products;
       // this._PostsService.friends.pop();
