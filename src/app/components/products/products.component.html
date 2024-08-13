@@ -1,0 +1,11 @@
+<section class="py-20 bg-[#F7F7FA]">
+    <div class="container w-[90%] mx-auto">
+        <div class="row">
+           @for (p of products; track $index){
+            <div class="col">
+         <app-card [product]="p"></app-card>
+            </div>
+           }
+        </div>
+    </div>
+</section>

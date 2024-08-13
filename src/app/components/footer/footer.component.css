@@ -1,0 +1,52 @@
+.support {
+    @apply grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 gap-4;
+  }
+  .support .col{
+    cursor: pointer;
+ 
+  }
+  .support > .col:hover {
+    opacity: 60%; /* Reduce opacity to 60% on hover */
+}
+.mega-menu{
+    @apply grid grid-cols-6 gap-10;
+
+
+}
+.mega-menu li{
+    cursor: pointer;
+    margin-block: 10px;
+    transition: all 0.3s ease;
+}
+.mega-menu li:hover{
+    background-color: #f5f5f5;
+}
+.container{
+    margin-inline: auto;
+    width: 80%;
+}
+
+a.font-thin{
+    position: relative; /* Set position relative */
+
+display: inline-block;
+cursor: pointer;
+}
+a.font-thin::after {
+    content: ''; /* Add content after the element */
+    position: absolute; /* Position absolute for pseudo-element */
+    width: 0%; /* Full width */
+    /* Initial scale of 0 for underline effect */
+    height: 2px; /* Height of the underline */
+    bottom: 0; /* Align to bottom */
+    left: 0; /* Align to left */
+    background-color: 
+  #b2ca00; /* Background color of the underline */
+    
+    transition: all 0.3s ease-out; /* Transition effect for the underline */
+  }
+  
+  a.font-thin:hover::after {
+    width: 100%; /* Scale the underline on hover */
+
+  }

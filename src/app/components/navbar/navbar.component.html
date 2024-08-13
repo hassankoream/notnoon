@@ -1,0 +1,59 @@
+<div class="nav-container">
+    <header>
+        <a routerLink="home"  class="logo lowercase	"><img class="w-[100px]"  src="https://f.nooncdn.com/s/app/com/noon/design-system/logos/noon-logo-en.svg" alt=""></a>
+
+        <!-- menu toggle -->
+         <input type="checkbox" id="menu-bar">
+         <label (click)="togglemenu()" for="menu-bar">
+            <ul>
+                <li>
+                    <span></span>
+                   
+                </li>
+                <li>
+                    <span></span>
+                   
+                </li>
+                <li>
+                    <span></span>
+                   
+                </li>
+            </ul>
+
+         </label>
+<!-- [ngClass]="{'block': isChecked == true, 'hidden': isChecked == false}" -->
+        <nav  class="navbar">
+      
+            <ul>
+                <li>
+                    <a (click)="changeCategory('')" routerLinkActive="bg-[#333] text-[#fff] rounded-md" routerLink="home">home</a>
+                </li>
+            
+                <li>
+                    <a  routerLink="">categories +</a>
+                    <ul>
+                        <li>
+                            <a (click)="changeCategory('men\'s clothing')" routerLink="">men</a>
+
+                        </li>
+                        <li>
+                            <a (click)="changeCategory('women\'s clothing')"  routerLink="">women</a>
+                            <ul>
+                                <li>
+                                    <a (click)="changeCategory('jewelery')"  routerLink="">jewelry</a>
+                                </li>
+                              
+                            </ul>
+                        </li>
+                        <li>
+                            <a (click)="changeCategory('electronics')"   routerLink="">electronics</a>
+                        </li>
+                    </ul>
+                </li>
+         
+            </ul>
+       </nav> 
+    </header>
+</div>
+
+

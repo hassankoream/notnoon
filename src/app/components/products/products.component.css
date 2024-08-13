@@ -1,0 +1,3 @@
+.row{
+    @apply grid xl:grid-cols-6 gap-5 lg:grid-cols-5 sm:grid-cols-3 md:grid-cols-4 grid-cols-2
+}
