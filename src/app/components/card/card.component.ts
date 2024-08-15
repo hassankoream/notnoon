@@ -16,4 +16,13 @@ export class CardComponent {
     const parts = title.split(/[\.,]/);
     return parts[0];
   }
+  addToCart(event: Event):void{
+    // console.log('Added to cart');
+    event.stopPropagation();
+    
+    
+  }
+  showProduct():void{
+    // console.log('Show Product dd');
+  }
 }
