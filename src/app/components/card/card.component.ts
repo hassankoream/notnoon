@@ -10,4 +10,10 @@ import { Iproduct } from '../../core/iproduct';
 })
 export class CardComponent {
    @Input({required:true}) product!:Iproduct
+
+
+   getTitleBeforeSeparator(title: string): string {
+    const parts = title.split(/[\.,]/);
+    return parts[0];
+  }
 }

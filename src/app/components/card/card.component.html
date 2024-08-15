@@ -1,26 +1,32 @@
-<div class="card h-full bg-[#ffffff] text-[0.8rem] p-2 rounded-lg cursor-pointer">
-    <div class="flex justify-between items-center bg-[#F7F7FA] pt-2 px-2 text-[0.9rem] relative">
+<div class="card min-h-full bg-[#ffffff] text-[0.6rem] p-2 rounded-lg shadow-lg cursor-pointer">
+    <div class="flex justify-between items-center bg-[#F7F7FA] pt-2 px-2 text-[0.7rem] relative">
         @if (product.rating.count>200){
             <div class="px-2 rounded-full bg-[#58595B] text-[#fff] font-bold capitalize absolute left-1 top-2">best seller</div>
         }
             
             <div class="flex p-3 bg-[#fff] text-[#58595B] justify-center items-center shadow-lg rounded-lg absolute right-1 top-1"><i class="fa-regular fa-heart"></i></div>
     </div>
-    <div class="min-h-[70%] flex justify-center items-center  bg-[#F7F7FA] px-2">
-        <img  [src]="product.image" alt="">
+    <div class=" flex justify-center items-center  bg-[#F7F7FA] px-2">
+        <img  [src]="product.image" alt="" class="h-[100px]">
+        
     </div>
+    <!-- <h1 class="font-bold text-[#302e2ef2] text-[0.7rem]">{{product.title}}</h1> -->
     <div class="flex justify-between items-center  bg-[#F7F7FA] p-2">
         <div class="bg-[#FFF] rounded p-1">{{product.rating.rate}}<i class="fa-solid fa-star text-[#82AE04]"></i>
             <span>({{product.rating.count}})</span></div>
        <div class="p-2 shadow-lg rounded-lg bg-[#fff]"> <img src="https://f.nooncdn.com/s/app/com/noon/icons/quick-atc-add-to-cart-grey.svg" alt=""></div>
     </div>
-    <div class="content min-h-[180px] mt-3">
+    <div class="content  mt-3 text-[1rem]">
 
 
-        <!-- <h1 class="font-bold text-[#302e2ef2]">{{product.title.split(' ').slice(0,4).join(' ')}}</h1> -->
-        <h1 class="font-bold text-[#302e2ef2]">{{product.title}}</h1>
-        <div>EGP {{product.price}}</div>
-
+        <h1 class="font-bold min-h-20 text-[#302e2ef2]">{{product.title.split(' ').slice(0,6).join(' ')}}</h1>
+        <!-- <h1 class="font-bold text-[#302e2ef2] ">{{product.title}}</h1> -->
+        <!-- <h1 class="font-bold min-h-20 text-[#302e2ef2]">
+            {{ getTitleBeforeSeparator(product.title) }}
+          </h1>
+           -->
+        
+        <div class=" mt-5">EGP {{product.price}}</div>
     </div>
-
+  
 </div>

@@ -1,4 +1,9 @@
-<section class="py-20 bg-[#F7F7FA]">
+@if(isLoading == true){
+<app-loading></app-loading>
+}
+
+
+ <section class="py-20 bg-[#F7F7FA]">
     <div class="container w-[90%] mx-auto">
         <div class="row">
            @for (p of products; track $index){
@@ -8,4 +13,4 @@
            }
         </div>
     </div>
-</section>
+</section> 
